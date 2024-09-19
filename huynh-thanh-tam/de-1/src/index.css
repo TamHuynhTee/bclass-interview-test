@@ -1,0 +1,132 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #ffdc9a;
+  --secondary-color: #fff9f3;
+  --red: #e42525;
+  --dark: #333333;
+  --green: #32a23d;
+  --gray: #878685;
+  --blue: #065193;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.filter {
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  align-items: flex-end;
+}
+
+.article-list {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+  width: 100%;
+  background-color: var(--secondary-color);
+
+  padding: 1rem;
+
+  border: 1px solid var(--red);
+
+  max-width: 60vw;
+}
+
+.article-card:not(:last-child) {
+  border-bottom: none;
+}
+
+.article-card > .thumbnail {
+  aspect-ratio: 1;
+  width: 200px;
+}
+
+.article-card > .thumbnail > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-card > .info {
+  flex: 1;
+}
+
+.article-card > .info > .title {
+  color: var(--red);
+  font-size: large;
+  line-height: 1.4;
+  font-weight: bolder;
+}
+
+.article-card > .info > .price {
+  color: var(--green);
+  font-size: large;
+  line-height: 1.4;
+  font-weight: bolder;
+}
+
+.article-card > .info > .metadata {
+  display: flex;
+  color: var(--gray);
+
+  gap: 1rem;
+}
+
+.article-card > .info > .metadata .address {
+  color: var(--blue);
+  font-size: medium;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.article-card > .info > .metadata .area {
+  color: var(--dark);
+  font-size: medium;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.article-card > .info > .content {
+  color: var(--gray);
+  font-size: medium;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.form-label {
+  font-weight: 700;
+  margin-bottom: 0.25rem !important;
+}
